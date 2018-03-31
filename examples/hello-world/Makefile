@@ -12,6 +12,9 @@ RIOTBASE ?= $(CURDIR)/../..
 # development process:
 DEVELHELP ?= 1
 USEMODULE += rtctimers-millis
+USEMODULE += shell
+USEMODULE += ps
+
 FEATURES_REQUIRED += periph_rtc
 FEATURES_REQUARED += periph_gpio
 
