@@ -1,5 +1,5 @@
 # name of your application
-APPLICATION = hello-world
+APPLICATION = mirea
 
 # If no BOARD is found in the environment, use this default:
 BOARD ?= unwd-range-l1-r3
@@ -11,14 +11,20 @@ RIOTBASE ?= $(CURDIR)/../..
 # which is not needed in a production environment but helps in the
 # development process:
 DEVELHELP ?= 1
+
 USEMODULE += rtctimers-millis
 USEMODULE += shell
+USEMODULE += shell_commands
 USEMODULE += ps
+USEMODULE += opt3001
+USEMODULE += xtimer
 
+FEATURES_REQUIRED += periph_i2c
 FEATURES_REQUIRED += periph_rtc
-FEATURES_REQUARED += periph_gpio
+FEATURES_REQUIRED += periph_gpio
 
 # Change this to 0 show compiler invocation lines by default:
 QUIET ?= 1
 
 include $(RIOTBASE)/Makefile.include
+
